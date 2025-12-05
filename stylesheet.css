@@ -1,0 +1,74 @@
+/* Default styles (mobile-first, vertical) */
+/* Reset default browser styles */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+nav {
+    background-color: #d10c82;
+    border-radius: 20px; /* Rounded corners for the nav bar */
+}
+
+/* Remove default list styles (bullet points, p & m) */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a line between list items */
+nav ul li {
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+}
+/* Remove the line under the last list item */
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #6b0042;
+}
+
+/* Current page look */
+nav ul li a.current {
+    background-color: #87d618;
+    color: black;
+}
+
+/* Larger screen styles (horizontal) */
+@media screen and (min-width: 769px) {
+    nav ul {
+        display: flex;
+        justify-content: left;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    nav ul li a {
+        border-right: 1px solid #6b0042;
+    }
+
+    nav ul li:last-child a {
+        border-right: none;
+    }
+}
+
